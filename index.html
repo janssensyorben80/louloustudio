@@ -12,16 +12,16 @@
 <meta property="og:title" content="Loulou Studio — Pilates in Drongen (Gent)">
 <meta property="og:description" content="Pilatesstudio in Drongen (Gent): reformer, mat en barre in kleine groepen, met persoonlijke begeleiding. Bewust bewegen, op jouw tempo.">
 <meta property="og:url" content="https://louloustudio.be/">
-<meta property="og:image" content="https://louloustudio.be/img/og-loulou.jpg">
+<meta property="og:image" content="https://louloustudio.be/og-loulou.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ExerciseGym","name":"Loulou Studio","description":"Pilatesstudio in Drongen (Gent) voor reformer, mat en barre in kleine groepen.","url":"https://louloustudio.be","logo":"https://louloustudio.be/img/og-loulou.jpg","image":"https://louloustudio.be/img/og-loulou.jpg","email":"info@louloustudio.be","address":{"@type":"PostalAddress","streetAddress":"Abdijmolenstraat 30","postalCode":"9031","addressLocality":"Drongen","addressRegion":"Oost-Vlaanderen","addressCountry":"BE"},"sameAs":["https://www.instagram.com/lou_lou_studio/","https://www.linkedin.com/company/loulou-studio-drongen/"]}</script>
-<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-<link rel="preload" as="image" href="img/gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ExerciseGym","name":"Loulou Studio","description":"Pilatesstudio in Drongen (Gent) voor reformer, mat en barre in kleine groepen.","url":"https://louloustudio.be","logo":"https://louloustudio.be/og-loulou.jpg","image":"https://louloustudio.be/og-loulou.jpg","email":"info@louloustudio.be","address":{"@type":"PostalAddress","streetAddress":"Abdijmolenstraat 30","postalCode":"9031","addressLocality":"Drongen","addressRegion":"Oost-Vlaanderen","addressCountry":"BE"},"sameAs":["https://www.instagram.com/lou_lou_studio/","https://www.linkedin.com/company/loulou-studio-drongen/"]}</script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" as="image" href="gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
@@ -75,7 +75,7 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 .brand small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;opacity:.75;margin-top:2px}
 /* ---- logo: vector wordmark, one masked slice per letter so letters can animate ---- */
 .lw{display:flex;aspect-ratio:3408/1132;line-height:0}
-.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("img/logo-loulou.svg") no-repeat;mask:url("img/logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
+.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("logo-loulou.svg") no-repeat;mask:url("logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
 .brand{display:inline-flex;flex-direction:column;align-items:flex-end;line-height:1}
 .brand .lw{width:6.4rem}
 .nav .brand{position:relative;left:min(0px,calc((min(1240px,100vw - 40px) - 100vw)/2 + 32px))}
@@ -159,8 +159,8 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 #curtain.down .cl,#curtain.down .cr{transition-duration:.2s;transition-timing-function:cubic-bezier(.6,0,.3,1)}
 #curtain.quick .cl,#curtain.quick .cr{transition-duration:.9s;transition-timing-function:cubic-bezier(.6,0,.2,1)}#curtain.quick .cbadge{transition-delay:0s!important;transition-duration:.25s}
 #curtain .cl,#curtain .cr{position:absolute;top:0;bottom:0;width:50.5%;background:#E9E3DA center/cover no-repeat;box-shadow:none;transition:transform 2.2s cubic-bezier(.7,0,.2,1)}
-#curtain .cl{background-image:url("img/gordijn2-l.jpg")}
-#curtain .cr{background-image:url("img/gordijn2-r.jpg")}
+#curtain .cl{background-image:url("gordijn2-l.jpg")}
+#curtain .cr{background-image:url("gordijn2-r.jpg")}
 #curtain .cl{left:0;transform-origin:left center}
 #curtain .cr{right:0;transform-origin:right center}
 #curtain .cl::after,#curtain .cr::after{display:none}
@@ -196,7 +196,7 @@ html{background:var(--bg)}html.nocurtain #curtain{display:none}html.ll-lock,html
 #curtain.up .cbadge{opacity:0;transform:translate(-50%,-50%) scale(.92);transition-delay:.35s}
 #curtain.down .cbadge{opacity:1;transform:translate(-50%,-50%);transition-delay:.5s;transition-duration:.35s}
 #curtain.down .cbadge .cword i{animation:none;transform:none}#curtain.down .cbadge small{animation:none;opacity:.85}#curtain.down .cline{animation:none;width:100%}
-@media (max-width:700px){#curtain .cl{background-image:url("img/gordijn2-l-m.jpg")}#curtain .cr{background-image:url("img/gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
+@media (max-width:700px){#curtain .cl{background-image:url("gordijn2-l-m.jpg")}#curtain .cr{background-image:url("gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
 
 /* ---- split headings (letters rise from the middle) ---- */
 h2.sh .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.22em .1em .1em;margin:-.22em -.1em -.1em}
@@ -645,7 +645,7 @@ footer .giant.in span{transform:translateY(0)}
 
 <main id="top" class="home">
 <section class="hero">
-  <div class="hero-bg"><img class="scale-down" src="img/pro-zaal-wide.jpg" alt="De lege reformerzaal van Loulou Studio in Drongen" style="object-position:50% 60%"></div>
+  <div class="hero-bg"><img class="scale-down" src="pro-zaal-wide.jpg" alt="De lege reformerzaal van Loulou Studio in Drongen" style="object-position:50% 60%"></div>
   <div class="hero-ov"></div>
   <div class="wrap hero-inner">
     <div class="hero-wm lw" id="heroWm" role="img" aria-label="loulou"><span style="--x:0;--w:201"></span><span style="--x:201;--w:806"></span><span style="--x:1007;--w:696"></span><span style="--x:1703;--w:222"></span><span style="--x:1925;--w:806"></span><span style="--x:2731;--w:677"></span></div>
@@ -667,7 +667,7 @@ footer .giant.in span{transform:translateY(0)}
       </div>
     </div>
     <div class="imgc" id="imgc">
-      <img src="img/pro-logo-bokeh.jpg" alt="Het loulou-logo op de muur van de studio, door het warme licht van de lampen">
+      <img src="pro-logo-bokeh.jpg" alt="Het loulou-logo op de muur van de studio, door het warme licht van de lampen">
       <div class="cover"></div>
     </div>
   </div>
@@ -681,21 +681,21 @@ footer .giant.in span{transform:translateY(0)}
         <span class="num">01</span>
         <h3>Barre</h3>
         <p>Geïnspireerd op pilates en ballet. Kleine, gecontroleerde bewegingen versterken en vormen het lichaam, met focus op benen, glutes en core.</p>
-        <div class="ph"><img loading="lazy" decoding="async" src="img/card-barre.jpg" alt="Barre pilates met polsgewichten"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="card-barre.jpg" alt="Barre pilates met polsgewichten"></div>
         <a class="lnk" href="reserveren.html#matbarre">Bekijk het rooster <span class="arr">→</span></a>
       </div>
       <div class="dcard rv">
         <span class="num">02</span>
         <h3>Mat</h3>
         <p>Pilates in zijn puurste vorm. Gecontroleerde bewegingen versterken je core en verbeteren kracht, stabiliteit en houding.</p>
-        <div class="ph"><img loading="lazy" decoding="async" src="img/card-mat.jpg" alt="Mat pilates: ademhaling en core"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="card-mat.jpg" alt="Mat pilates: ademhaling en core"></div>
         <a class="lnk" href="reserveren.html#matbarre">Bekijk het rooster <span class="arr">→</span></a>
       </div>
       <div class="dcard rv">
         <span class="num">03</span>
         <h3>Reformer</h3>
         <p>Vloeiende, gecontroleerde bewegingen op de reformer, waarbij weerstand en ondersteuning samenkomen voor meer kracht, stabiliteit en balans.</p>
-        <div class="ph"><img loading="lazy" decoding="async" src="img/card-reformer-gewichten.jpg" alt="Polsgewichten in de hand tegen een bordeaux achtergrond"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="card-reformer-gewichten.jpg" alt="Polsgewichten in de hand tegen een bordeaux achtergrond"></div>
         <a class="lnk" href="reserveren.html">Bekijk het rooster <span class="arr">→</span></a>
       </div>
     </div>
@@ -709,18 +709,18 @@ footer .giant.in span{transform:translateY(0)}
     <div class="gal-nav"><button id="gPrev" aria-label="Vorige foto">←</button><button id="gNext" aria-label="Volgende foto">→</button></div>
   </div>
   <div class="track" id="track">
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-circle.jpg" alt="Groepsles met magic circles op de reformers" draggable="false"><figcaption>Small groups</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-rust.jpg" alt="Deelnemer ligt ontspannen op de reformer" draggable="false"><figcaption>Bewust bewegen</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-veren.jpg" alt="Hand die een veer van de reformer aanhaakt" draggable="false"><figcaption>Veren</figcaption></figure>
-    <figure class="slide wide"><img loading="lazy" decoding="async" src="img/small-groups.jpg" alt="Drie deelnemers tijdens een reformerles" draggable="false"><figcaption>Small groups</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/deur-kast.jpg" alt="Eiken kast met handdoeken en de terracotta deur" draggable="false"><figcaption>Our home</figcaption></figure>
-    <figure class="slide wide"><img loading="lazy" decoding="async" src="img/polsgewichten.jpg" alt="Instructeur helpt bij een oefening met polsgewichten" draggable="false"><figcaption>No experience needed</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-socks-duo.jpg" alt="Opgevouwen Loulou grip socks in de hand" draggable="false"><figcaption>Grip socks</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-balie-logo.jpg" alt="De ontvangst met de bordeaux tegelbalie en het Loulou-logo" draggable="false"><figcaption>Ontvangst</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-zaal-warm.jpg" alt="De reformerzaal met warm licht onder de drapes" draggable="false"><figcaption>Reformerzaal</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-lounge.jpg" alt="De lounge met ronde zetel, papieren lampen en bordeaux tegelwand" draggable="false"><figcaption>Lounge</figcaption></figure>
-    <figure class="slide wide"><img loading="lazy" decoding="async" src="img/pro-koffie-wide.jpg" alt="Een Loulou-koffiebeker op de bordeaux tegelbalie" draggable="false"><figcaption>Koffie aan de bar</figcaption></figure>
-    <figure class="slide"><img loading="lazy" decoding="async" src="img/pro-prive-benen.jpg" alt="Alessia corrigeert de beenhouding van een deelnemer op de reformer" draggable="false"><figcaption>Duo en privé</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-circle.jpg" alt="Groepsles met magic circles op de reformers" draggable="false"><figcaption>Small groups</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-rust.jpg" alt="Deelnemer ligt ontspannen op de reformer" draggable="false"><figcaption>Bewust bewegen</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-veren.jpg" alt="Hand die een veer van de reformer aanhaakt" draggable="false"><figcaption>Veren</figcaption></figure>
+    <figure class="slide wide"><img loading="lazy" decoding="async" src="small-groups.jpg" alt="Drie deelnemers tijdens een reformerles" draggable="false"><figcaption>Small groups</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="deur-kast.jpg" alt="Eiken kast met handdoeken en de terracotta deur" draggable="false"><figcaption>Our home</figcaption></figure>
+    <figure class="slide wide"><img loading="lazy" decoding="async" src="polsgewichten.jpg" alt="Instructeur helpt bij een oefening met polsgewichten" draggable="false"><figcaption>No experience needed</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-socks-duo.jpg" alt="Opgevouwen Loulou grip socks in de hand" draggable="false"><figcaption>Grip socks</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-balie-logo.jpg" alt="De ontvangst met de bordeaux tegelbalie en het Loulou-logo" draggable="false"><figcaption>Ontvangst</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-zaal-warm.jpg" alt="De reformerzaal met warm licht onder de drapes" draggable="false"><figcaption>Reformerzaal</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-lounge.jpg" alt="De lounge met ronde zetel, papieren lampen en bordeaux tegelwand" draggable="false"><figcaption>Lounge</figcaption></figure>
+    <figure class="slide wide"><img loading="lazy" decoding="async" src="pro-koffie-wide.jpg" alt="Een Loulou-koffiebeker op de bordeaux tegelbalie" draggable="false"><figcaption>Koffie aan de bar</figcaption></figure>
+    <figure class="slide"><img loading="lazy" decoding="async" src="pro-prive-benen.jpg" alt="Alessia corrigeert de beenhouding van een deelnemer op de reformer" draggable="false"><figcaption>Duo en privé</figcaption></figure>
   </div>
 </section>
 
@@ -738,8 +738,8 @@ footer .giant.in span{transform:translateY(0)}
 
 <section class="spot" aria-hidden="true">
   <div class="strip" id="strip">
-    <img loading="lazy" decoding="async" src="img/pro-circle.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-koffie.jpg" alt=""><img loading="lazy" decoding="async" src="img/sokken-footbar.jpg" alt=""><img loading="lazy" decoding="async" src="img/deur-kast.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-rust.jpg" alt=""><img loading="lazy" decoding="async" src="img/polsgewichten.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-logo-muur.jpg" alt=""><img loading="lazy" decoding="async" src="img/drape-plafond.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-logo-bokeh.jpg" alt="">
-    <img loading="lazy" decoding="async" src="img/pro-circle.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-koffie.jpg" alt=""><img loading="lazy" decoding="async" src="img/sokken-footbar.jpg" alt=""><img loading="lazy" decoding="async" src="img/deur-kast.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-rust.jpg" alt=""><img loading="lazy" decoding="async" src="img/polsgewichten.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-logo-muur.jpg" alt=""><img loading="lazy" decoding="async" src="img/drape-plafond.jpg" alt=""><img loading="lazy" decoding="async" src="img/pro-logo-bokeh.jpg" alt="">
+    <img loading="lazy" decoding="async" src="pro-circle.jpg" alt=""><img loading="lazy" decoding="async" src="pro-koffie.jpg" alt=""><img loading="lazy" decoding="async" src="sokken-footbar.jpg" alt=""><img loading="lazy" decoding="async" src="deur-kast.jpg" alt=""><img loading="lazy" decoding="async" src="pro-rust.jpg" alt=""><img loading="lazy" decoding="async" src="polsgewichten.jpg" alt=""><img loading="lazy" decoding="async" src="pro-logo-muur.jpg" alt=""><img loading="lazy" decoding="async" src="drape-plafond.jpg" alt=""><img loading="lazy" decoding="async" src="pro-logo-bokeh.jpg" alt="">
+    <img loading="lazy" decoding="async" src="pro-circle.jpg" alt=""><img loading="lazy" decoding="async" src="pro-koffie.jpg" alt=""><img loading="lazy" decoding="async" src="sokken-footbar.jpg" alt=""><img loading="lazy" decoding="async" src="deur-kast.jpg" alt=""><img loading="lazy" decoding="async" src="pro-rust.jpg" alt=""><img loading="lazy" decoding="async" src="polsgewichten.jpg" alt=""><img loading="lazy" decoding="async" src="pro-logo-muur.jpg" alt=""><img loading="lazy" decoding="async" src="drape-plafond.jpg" alt=""><img loading="lazy" decoding="async" src="pro-logo-bokeh.jpg" alt="">
   </div>
 </section>
 
@@ -779,11 +779,11 @@ footer .giant.in span{transform:translateY(0)}
       <a class="btn btn-ghost" style="margin-top:1rem" href="reserveren.html">Bekijk het lesrooster <span class="arr">→</span></a>
     </div>
     <div class="class-visual" id="classVisual">
-      <img loading="lazy" decoding="async" id="ci0" class="show" src="img/pro-stretch.jpg" alt="Deelnemer strekt zich uit over de footbar tijdens Reformer Foundations">
-      <img loading="lazy" decoding="async" id="ci1" src="img/pro-legs.jpg" alt="Benenwerk op de reformer tijdens Reformer Sculpt">
-      <img loading="lazy" decoding="async" id="ci2" src="img/pro-bridge.jpg" alt="Bridge op de reformer tijdens Reformer Sculpt Intens">
-      <img loading="lazy" decoding="async" id="ci3" src="img/pro-flow.jpg" alt="Groepsles in beweging tijdens Reformer Flow">
-      <img loading="lazy" decoding="async" id="ci4" src="img/pro-bootcamp.jpg" alt="Close-up van de veren op de reformer tijdens Reformer Bootcamp">
+      <img loading="lazy" decoding="async" id="ci0" class="show" src="pro-stretch.jpg" alt="Deelnemer strekt zich uit over de footbar tijdens Reformer Foundations">
+      <img loading="lazy" decoding="async" id="ci1" src="pro-legs.jpg" alt="Benenwerk op de reformer tijdens Reformer Sculpt">
+      <img loading="lazy" decoding="async" id="ci2" src="pro-bridge.jpg" alt="Bridge op de reformer tijdens Reformer Sculpt Intens">
+      <img loading="lazy" decoding="async" id="ci3" src="pro-flow.jpg" alt="Groepsles in beweging tijdens Reformer Flow">
+      <img loading="lazy" decoding="async" id="ci4" src="pro-bootcamp.jpg" alt="Close-up van de veren op de reformer tijdens Reformer Bootcamp">
       <span class="tag" id="classTag">Reformer Foundations</span>
     </div>
   </div>
@@ -791,7 +791,7 @@ footer .giant.in span{transform:translateY(0)}
 
 <section class="team" id="team">
   <div class="wrap">
-    <div class="ph rv"><img loading="lazy" decoding="async" src="img/pro-alessia-sofa.jpg" alt="Alessia, oprichter en instructeur van Loulou Studio, in de lounge"></div>
+    <div class="ph rv"><img loading="lazy" decoding="async" src="pro-alessia-sofa.jpg" alt="Alessia, oprichter en instructeur van Loulou Studio, in de lounge"></div>
     <div>
       <div class="eyebrow">Wie je begeleidt</div>
       <blockquote>"Ik wil dat Loulou een plek is waar je graag komt. Waar je even tijd maakt voor jezelf, beweegt, sterker wordt en vooral met een goed gevoel weer buitenstapt."</blockquote>
@@ -828,7 +828,7 @@ footer .giant.in span{transform:translateY(0)}
       </div>
     </div>
     <div class="viewer" id="viewer">
-      <model-viewer id="mv" src="model/reformer.gltf.json" loading="eager" reveal="auto" alt="3D-model van de Loulou reformer" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="14deg" shadow-intensity="1.2" exposure="1.05" interaction-prompt="none" camera-orbit="35deg 72deg 105%" min-camera-orbit="auto 15deg 0.6m" field-of-view="30deg" interpolation-decay="120" max-camera-orbit="auto 95deg 140%" touch-action="pan-y">
+      <model-viewer id="mv" src="reformer.gltf.json" loading="eager" reveal="auto" alt="3D-model van de Loulou reformer" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="14deg" shadow-intensity="1.2" exposure="1.05" interaction-prompt="none" camera-orbit="35deg 72deg 105%" min-camera-orbit="auto 15deg 0.6m" field-of-view="30deg" interpolation-decay="120" max-camera-orbit="auto 95deg 140%" touch-action="pan-y">
         <button class="hotspot" slot="hotspot-carriage" data-k="carriage" data-position="0 0 0" data-normal="0 1 0" aria-label="Carriage"><span class="lbl">Carriage</span></button>
         <button class="hotspot" slot="hotspot-veren" data-k="veren" data-position="0 0 0" data-normal="0 0 1" aria-label="Veren"><span class="lbl">Veren</span></button>
         <button class="hotspot" slot="hotspot-footbar" data-k="footbar" data-position="0 0 0" data-normal="0 1 0" aria-label="Footbar"><span class="lbl">Footbar</span></button>
@@ -863,7 +863,7 @@ footer .giant.in span{transform:translateY(0)}
             <p>Welke lessen er vandaag op het rooster staan en hoeveel plaatsen er nog vrij zijn, zie je live in Clubplanner.</p>
             <div class="types"><span>Foundations</span><span>Flow</span><span>Sculpt</span><span>Sculpt Intens</span><span>Bootcamp</span><span>Mat</span><span>Barre</span></div>
           </div>
-          <div class="sph"><img src="img/pro-zaal-hoog.jpg" alt="" loading="lazy"></div>
+          <div class="sph"><img src="pro-zaal-hoog.jpg" alt="" loading="lazy"></div>
           <div class="cta">Open het live rooster <span class="arr">→</span></div>
           </div>
         </div>
@@ -996,7 +996,7 @@ footer .giant.in span{transform:translateY(0)}
 <section class="private" id="prive">
   <div class="wrap">
     <div class="split">
-      <div class="ph"><img loading="lazy" decoding="async" src="img/pro-prive-knie.jpg" alt="Alessia knielt naast de reformer en begeleidt een deelnemer één-op-één"></div>
+      <div class="ph"><img loading="lazy" decoding="async" src="pro-prive-knie.jpg" alt="Alessia knielt naast de reformer en begeleidt een deelnemer één-op-één"></div>
       <div class="panel">
         <h2>Boek <em>een privéles</em></h2>
         <p>Vraag een privé- of duo-sessie aan en krijg een pilatesplan op maat van jouw doelen: techniek, revalidatie, zwangerschap of gewoon één-op-één aandacht.</p>
@@ -1022,7 +1022,7 @@ footer .giant.in span{transform:translateY(0)}
 </section>
 
 <section class="band">
-  <picture><source media="(max-width:700px)" srcset="img/pro-zaal-warm.jpg"><img loading="lazy" decoding="async" src="img/pro-rust-wide.jpg" alt="Deelnemer ligt ontspannen op de reformer"></picture>
+  <picture><source media="(max-width:700px)" srcset="pro-zaal-warm.jpg"><img loading="lazy" decoding="async" src="pro-rust-wide.jpg" alt="Deelnemer ligt ontspannen op de reformer"></picture>
   <div class="over"><div class="rv"><h2 class="split">Klaar om te <em>starten</em>?</h2><a class="btn" href="reserveren.html">Boek je eerste les <span class="arr">→</span></a></div></div>
 </section>
 </main>
@@ -1330,7 +1330,7 @@ footer .giant.in span{transform:translateY(0)}
 <div class="lp-ov" id="lpOv" role="dialog" aria-modal="true" aria-labelledby="lpT" aria-hidden="true">
   <div class="lp">
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="ph"><img loading="lazy" decoding="async" src="img/card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
+    <div class="ph"><img loading="lazy" decoding="async" src="card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
     <div class="tx">
       <span class="dt">Nieuw bij Loulou</span>
       <div class="eyebrow">Mat &amp; barre</div>

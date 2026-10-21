@@ -13,14 +13,14 @@
 <meta property="og:title" content="Boek een les — Loulou Studio">
 <meta property="og:description" content="Zo boek je een les bij Loulou Studio: kies je formule, reserveer je plaats in het rooster en kom tien minuten vroeger.">
 <meta property="og:url" content="https://louloustudio.be/reserveren">
-<meta property="og:image" content="https://louloustudio.be/img/og-loulou.jpg">
+<meta property="og:image" content="https://louloustudio.be/og-loulou.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="img/gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
@@ -74,7 +74,7 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 .brand small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;opacity:.75;margin-top:2px}
 /* ---- logo: vector wordmark, one masked slice per letter so letters can animate ---- */
 .lw{display:flex;aspect-ratio:3408/1132;line-height:0}
-.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("img/logo-loulou.svg") no-repeat;mask:url("img/logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
+.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("logo-loulou.svg") no-repeat;mask:url("logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
 .brand{display:inline-flex;flex-direction:column;align-items:flex-end;line-height:1}
 .brand .lw{width:6.4rem}
 .nav .brand{position:relative;left:min(0px,calc((min(1240px,100vw - 40px) - 100vw)/2 + 32px))}
@@ -158,8 +158,8 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 #curtain.down .cl,#curtain.down .cr{transition-duration:.2s;transition-timing-function:cubic-bezier(.6,0,.3,1)}
 #curtain.quick .cl,#curtain.quick .cr{transition-duration:.9s;transition-timing-function:cubic-bezier(.6,0,.2,1)}#curtain.quick .cbadge{transition-delay:0s!important;transition-duration:.25s}
 #curtain .cl,#curtain .cr{position:absolute;top:0;bottom:0;width:50.5%;background:#E9E3DA center/cover no-repeat;box-shadow:none;transition:transform 2.2s cubic-bezier(.7,0,.2,1)}
-#curtain .cl{background-image:url("img/gordijn2-l.jpg")}
-#curtain .cr{background-image:url("img/gordijn2-r.jpg")}
+#curtain .cl{background-image:url("gordijn2-l.jpg")}
+#curtain .cr{background-image:url("gordijn2-r.jpg")}
 #curtain .cl{left:0;transform-origin:left center}
 #curtain .cr{right:0;transform-origin:right center}
 #curtain .cl::after,#curtain .cr::after{display:none}
@@ -195,7 +195,7 @@ html{background:var(--bg)}html.nocurtain #curtain{display:none}html.ll-lock,html
 #curtain.up .cbadge{opacity:0;transform:translate(-50%,-50%) scale(.92);transition-delay:.35s}
 #curtain.down .cbadge{opacity:1;transform:translate(-50%,-50%);transition-delay:.5s;transition-duration:.35s}
 #curtain.down .cbadge .cword i{animation:none;transform:none}#curtain.down .cbadge small{animation:none;opacity:.85}#curtain.down .cline{animation:none;width:100%}
-@media (max-width:700px){#curtain .cl{background-image:url("img/gordijn2-l-m.jpg")}#curtain .cr{background-image:url("img/gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
+@media (max-width:700px){#curtain .cl{background-image:url("gordijn2-l-m.jpg")}#curtain .cr{background-image:url("gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
 
 /* ---- split headings (letters rise from the middle) ---- */
 h2.sh .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.22em .1em .1em;margin:-.22em -.1em -.1em}
@@ -715,10 +715,10 @@ footer .giant.in span{transform:translateY(0)}
   <div class="wrap">
     <div class="eyebrow">Wat wil je boeken?</div>
     <div class="grid">
-      <div class="sp-card rv"><div class="ph"><img src="img/pro-flow.jpg" alt="Reformerles bij Loulou Studio" loading="lazy"></div>
+      <div class="sp-card rv"><div class="ph"><img src="pro-flow.jpg" alt="Reformerles bij Loulou Studio" loading="lazy"></div>
         <div class="tx"><h3>Reformer</h3><p>Groepslessen op de reformer: Foundations, Flow, Sculpt en Bootcamp. Losse les €25.</p>
         <div class="bt"><a class="btn btn-solid" href="#groepsles" data-disc="reformer">Bekijk het rooster <span class="arr">→</span></a><a class="lnk" href="https://louloustudio.clubplanner.app/client/registration/reservation/nested/1" target="_blank" rel="noopener">Direct in Clubplanner</a></div></div></div>
-      <div class="sp-card rv"><div class="ph"><img src="img/card-barre.jpg" alt="Mat en barre bij Loulou Studio" style="object-position:50% 40%" loading="lazy"></div>
+      <div class="sp-card rv"><div class="ph"><img src="card-barre.jpg" alt="Mat en barre bij Loulou Studio" style="object-position:50% 40%" loading="lazy"></div>
         <div class="tx"><h3>Mat &amp; barre</h3><p>Mat pilates en barre in onze nieuwe zaal. Losse les €18, beurtenkaarten vanaf €85.</p>
         <div class="bt"><a class="btn btn-solid" href="#groepsles" data-disc="matbarre">Bekijk het rooster <span class="arr">→</span></a><a class="lnk" href="https://louloustudio.clubplanner.app/client/registration/reservation/nested/2" target="_blank" rel="noopener">Direct in Clubplanner</a></div></div></div>
     </div>
@@ -758,7 +758,7 @@ footer .giant.in span{transform:translateY(0)}
       <div class="eyebrow">Liever één-op-één?</div>
       <h2 class="sh" style="margin-bottom:1rem">Boek een <em>privésessie</em></h2>
       <p class="lede">Solo of duo, op een moment dat jou past. Vraag een sessie aan en Alessia stelt een plan op maat voor: herstel, techniek, zwangerschap of gewoon volle aandacht. €65 per sessie.</p>
-      <div class="ph rv" style="margin-top:1.6rem"><img src="img/pro-prive-knie.jpg" alt="Alessia begeleidt een privésessie op de reformer"></div>
+      <div class="ph rv" style="margin-top:1.6rem"><img src="pro-prive-knie.jpg" alt="Alessia begeleidt een privésessie op de reformer"></div>
     </div>
     <form id="privForm">
       <fieldset><legend>Type sessie</legend><div class="opts"><label><input type="radio" name="p_type" value="Privé (solo)" checked><span>Privé (solo)</span></label><label><input type="radio" name="p_type" value="Duo"><span>Duo</span></label><label><input type="radio" name="p_type" value="Teambuilding / groep"><span>Teambuilding</span></label></div></fieldset>
@@ -802,7 +802,7 @@ footer .giant.in span{transform:translateY(0)}
             <p>Welke lessen er vandaag op het rooster staan en hoeveel plaatsen er nog vrij zijn, zie je live in Clubplanner.</p>
             <div class="types"><span>Foundations</span><span>Flow</span><span>Sculpt</span><span>Sculpt Intens</span><span>Bootcamp</span><span>Mat</span><span>Barre</span></div>
           </div>
-          <div class="sph"><img src="img/pro-zaal-hoog.jpg" alt="" loading="lazy"></div>
+          <div class="sph"><img src="pro-zaal-hoog.jpg" alt="" loading="lazy"></div>
           <div class="cta">Open het live rooster <span class="arr">→</span></div>
           </div>
         </div>
@@ -1222,7 +1222,7 @@ footer .giant.in span{transform:translateY(0)}
 <div class="lp-ov" id="lpOv" role="dialog" aria-modal="true" aria-labelledby="lpT" aria-hidden="true">
   <div class="lp">
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="ph"><img src="img/card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
+    <div class="ph"><img src="card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
     <div class="tx">
       <span class="dt">Nieuw bij Loulou</span>
       <div class="eyebrow">Mat &amp; barre</div>

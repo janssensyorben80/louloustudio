@@ -13,14 +13,14 @@
 <meta property="og:title" content="De reformer — Loulou Studio">
 <meta property="og:description" content="Leer de reformer kennen: hoe het toestel werkt, de onderdelen en de klassieke oefeningen die je bij Loulou tegenkomt.">
 <meta property="og:url" content="https://louloustudio.be/reformer">
-<meta property="og:image" content="https://louloustudio.be/img/og-loulou.jpg">
+<meta property="og:image" content="https://louloustudio.be/og-loulou.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="img/gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-l.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r.jpg" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-l-m.jpg" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="gordijn2-r-m.jpg" media="(max-width:700px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
@@ -74,7 +74,7 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 .brand small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;opacity:.75;margin-top:2px}
 /* ---- logo: vector wordmark, one masked slice per letter so letters can animate ---- */
 .lw{display:flex;aspect-ratio:3408/1132;line-height:0}
-.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("img/logo-loulou.svg") no-repeat;mask:url("img/logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
+.lw>*{display:block;height:100%;flex:0 0 calc(var(--w)/3408*100%);background:currentColor;-webkit-mask:url("logo-loulou.svg") no-repeat;mask:url("logo-loulou.svg") no-repeat;-webkit-mask-size:calc(3408/var(--w)*100%) 100%;mask-size:calc(3408/var(--w)*100%) 100%;-webkit-mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0;mask-position:calc(var(--x)/(3408 - var(--w))*100%) 0}
 .brand{display:inline-flex;flex-direction:column;align-items:flex-end;line-height:1}
 .brand .lw{width:6.4rem}
 .nav .brand{position:relative;left:min(0px,calc((min(1240px,100vw - 40px) - 100vw)/2 + 32px))}
@@ -158,8 +158,8 @@ section{padding-block:clamp(4.5rem,9vw,8.5rem)}
 #curtain.down .cl,#curtain.down .cr{transition-duration:.2s;transition-timing-function:cubic-bezier(.6,0,.3,1)}
 #curtain.quick .cl,#curtain.quick .cr{transition-duration:.9s;transition-timing-function:cubic-bezier(.6,0,.2,1)}#curtain.quick .cbadge{transition-delay:0s!important;transition-duration:.25s}
 #curtain .cl,#curtain .cr{position:absolute;top:0;bottom:0;width:50.5%;background:#E9E3DA center/cover no-repeat;box-shadow:none;transition:transform 2.2s cubic-bezier(.7,0,.2,1)}
-#curtain .cl{background-image:url("img/gordijn2-l.jpg")}
-#curtain .cr{background-image:url("img/gordijn2-r.jpg")}
+#curtain .cl{background-image:url("gordijn2-l.jpg")}
+#curtain .cr{background-image:url("gordijn2-r.jpg")}
 #curtain .cl{left:0;transform-origin:left center}
 #curtain .cr{right:0;transform-origin:right center}
 #curtain .cl::after,#curtain .cr::after{display:none}
@@ -195,7 +195,7 @@ html{background:var(--bg)}html.nocurtain #curtain{display:none}html.ll-lock,html
 #curtain.up .cbadge{opacity:0;transform:translate(-50%,-50%) scale(.92);transition-delay:.35s}
 #curtain.down .cbadge{opacity:1;transform:translate(-50%,-50%);transition-delay:.5s;transition-duration:.35s}
 #curtain.down .cbadge .cword i{animation:none;transform:none}#curtain.down .cbadge small{animation:none;opacity:.85}#curtain.down .cline{animation:none;width:100%}
-@media (max-width:700px){#curtain .cl{background-image:url("img/gordijn2-l-m.jpg")}#curtain .cr{background-image:url("img/gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
+@media (max-width:700px){#curtain .cl{background-image:url("gordijn2-l-m.jpg")}#curtain .cr{background-image:url("gordijn2-r-m.jpg")}#curtain .cl,#curtain .cr{background-size:cover;background-position:center;box-shadow:none}#curtain .cl::after,#curtain .cr::after{width:36px}#curtain .cbadge{padding:1.1rem 1.6rem 1rem;border-radius:12px;width:max-content;max-width:80vw}#curtain .cword{width:6.6rem}#curtain .cbadge small{font-size:.52rem;letter-spacing:.28em;white-space:nowrap;margin-top:.35rem}#curtain .cline{margin-top:.75rem}}
 
 /* ---- split headings (letters rise from the middle) ---- */
 h2.sh .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.22em .1em .1em;margin:-.22em -.1em -.1em}
@@ -782,7 +782,7 @@ footer .giant.in span{transform:translateY(0)}
       </div>
     </div>
     <div class="viewer" id="viewer">
-      <model-viewer id="mv" src="model/reformer.gltf.json" loading="eager" reveal="auto" alt="3D-model van de Loulou reformer" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="14deg" shadow-intensity="1.2" exposure="1.05" interaction-prompt="none" camera-orbit="35deg 72deg 105%" min-camera-orbit="auto 15deg 0.6m" field-of-view="30deg" interpolation-decay="120" max-camera-orbit="auto 95deg 140%" touch-action="pan-y">
+      <model-viewer id="mv" src="reformer.gltf.json" loading="eager" reveal="auto" alt="3D-model van de Loulou reformer" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="14deg" shadow-intensity="1.2" exposure="1.05" interaction-prompt="none" camera-orbit="35deg 72deg 105%" min-camera-orbit="auto 15deg 0.6m" field-of-view="30deg" interpolation-decay="120" max-camera-orbit="auto 95deg 140%" touch-action="pan-y">
         <button class="hotspot" slot="hotspot-carriage" data-k="carriage" data-position="0 0 0" data-normal="0 1 0" aria-label="Carriage"><span class="lbl">Carriage</span></button>
         <button class="hotspot" slot="hotspot-veren" data-k="veren" data-position="0 0 0" data-normal="0 0 1" aria-label="Veren"><span class="lbl">Veren</span></button>
         <button class="hotspot" slot="hotspot-footbar" data-k="footbar" data-position="0 0 0" data-normal="0 1 0" aria-label="Footbar"><span class="lbl">Footbar</span></button>
@@ -828,7 +828,7 @@ footer .giant.in span{transform:translateY(0)}
   </div>
 </section>
 <section class="band">
-  <picture><source media="(max-width:700px)" srcset="img/pro-zaal-warm.jpg"><img src="img/pro-rust-wide.jpg" alt="Deelnemer ligt ontspannen op de reformer"></picture>
+  <picture><source media="(max-width:700px)" srcset="pro-zaal-warm.jpg"><img src="pro-rust-wide.jpg" alt="Deelnemer ligt ontspannen op de reformer"></picture>
   <div class="over"><div class="rv"><h2 class="split">Klaar om te <em>starten</em>?</h2><a class="btn" href="reserveren.html">Boek je eerste les <span class="arr">→</span></a></div></div>
 </section>
 </main>
@@ -1171,7 +1171,7 @@ footer .giant.in span{transform:translateY(0)}
 <div class="lp-ov" id="lpOv" role="dialog" aria-modal="true" aria-labelledby="lpT" aria-hidden="true">
   <div class="lp">
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="ph"><img src="img/card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
+    <div class="ph"><img src="card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
     <div class="tx">
       <span class="dt">Nieuw bij Loulou</span>
       <div class="eyebrow">Mat &amp; barre</div>
