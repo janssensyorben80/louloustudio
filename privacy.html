@@ -1076,5 +1076,52 @@ footer .giant.in span{transform:translateY(0)}
 })();
 </script>
 
+<style id="llbk-css">
+.llbk-ov{position:fixed;inset:0;z-index:2147483000;background:rgba(28,23,21,.45);display:flex;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .2s}
+.llbk-ov.on{opacity:1}
+.llbk{width:100%;max-width:440px;background:#F6F1EB;color:#1C1715;border-radius:18px 18px 0 0;padding:22px 18px calc(18px + env(safe-area-inset-bottom));transform:translateY(24px);transition:transform .25s;font-family:inherit;box-shadow:0 -10px 40px rgba(0,0,0,.18)}
+.llbk-ov.on .llbk{transform:none}
+@media (min-width:701px){.llbk-ov{align-items:center}.llbk{border-radius:18px;padding:26px 24px}}
+.llbk-h{display:flex;justify-content:space-between;align-items:center;margin:0 4px 14px}
+.llbk-h b{font-size:1.15rem;font-weight:600;color:#59010E}
+.llbk-x{background:none;border:0;font-size:1.6rem;line-height:1;color:#59010E;cursor:pointer;padding:4px 8px}
+.llbk a{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;background:#fff;border:1px solid rgba(89,1,14,.18);border-radius:14px;padding:16px 18px;margin-top:10px;color:#1C1715}
+.llbk a:hover{border-color:#59010E}
+.llbk a strong{display:block;font-size:1.05rem;color:#59010E}
+.llbk a small{display:block;font-size:.85rem;color:#6E625A;margin-top:2px}
+.llbk a span.ar{font-size:1.3rem;color:#59010E}
+</style>
+<script id="llbk-js">(function(){
+var CP1='https://louloustudio.clubplanner.app/client/registration/reservation/nested/1',CP2='https://louloustudio.clubplanner.app/client/registration/reservation/nested/2';
+var page=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');
+if(page==='reserveren')return;
+function killPop(){try{sessionStorage.setItem('ll-booking','1')}catch(e){}var p=document.getElementById('lpOv');if(p)p.remove();}
+function go(u){killPop();var w=window.open(u,'_blank','noopener');if(!w)location.href=u;}
+var ov;
+function close(){if(!ov)return;ov.classList.remove('on');var o=ov;ov=null;setTimeout(function(){o.remove()},200);}
+function open(){
+ if(ov)return;killPop();
+ ov=document.createElement('div');ov.className='llbk-ov';
+ ov.innerHTML='<div class="llbk" role="dialog" aria-modal="true" aria-label="Kies wat je wil boeken"><div class="llbk-h"><b>Wat wil je boeken?</b><button class="llbk-x" aria-label="Sluiten">&times;</button></div>'+
+ '<a href="'+CP1+'" data-u="1"><span><strong>Reformer</strong><small>Groepsles op de reformer</small></span><span class="ar">&rarr;</span></a>'+
+ '<a href="'+CP2+'" data-u="2"><span><strong>Mat &amp; barre</strong><small>Mat pilates of barre</small></span><span class="ar">&rarr;</span></a></div>';
+ document.body.appendChild(ov);requestAnimationFrame(function(){ov&&ov.classList.add('on')});
+ ov.addEventListener('click',function(e){var a=e.target.closest('a');if(a){e.preventDefault();var u=a.href;close();go(u);return;}if(e.target===ov||e.target.closest('.llbk-x'))close();});
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+document.addEventListener('click',function(e){
+ if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey)return;
+ var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+ var h=a.getAttribute('href')||'';
+ if(!/^(\.\/)?reserveren(\.html)?(#.*)?$/.test(h)&&h!=='#kies')return;
+ var hash=(h.split('#')[1]||'');
+ if(hash==='privesessie'||/zo reserveer/i.test(a.textContent))return;
+ e.preventDefault();e.stopPropagation();
+ if(hash==='matbarre')return go(CP2);
+ if(hash==='reformer'||page==='reformer')return go(CP1);
+ open();
+},true);
+})();</script>
+
 </body>
 </html>
