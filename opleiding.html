@@ -2,7 +2,26 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<style>html{background:#F6F2EB}</style>
+<style>html{background:#F6F2EB}
+/* ---- inschrijvingsformulier ---- */
+#inschrijven .op-form-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.6rem,4vw,4rem);margin-top:1.8rem;align-items:start}
+#ttForm{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.1rem;background:var(--card);border:1px solid var(--line);padding:clamp(1.4rem,3vw,2.2rem);border-radius:6px}
+#ttForm .full{grid-column:1/-1}
+#ttForm label{display:flex;flex-direction:column;gap:.35rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+#ttForm input,#ttForm select,#ttForm textarea{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;padding:.75rem .85rem;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink)}
+#ttForm input:focus,#ttForm select:focus,#ttForm textarea:focus{outline:2px solid color-mix(in srgb,var(--bordeaux) 35%,transparent);border-color:var(--bordeaux)}
+#ttForm .chk{flex-direction:row;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.9rem;color:var(--ink-2);font-weight:400}
+#ttForm .chk input{margin-top:.2rem;width:1.05rem;height:1.05rem;accent-color:var(--bordeaux);padding:0}
+#ttForm .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#ttForm .btn{justify-self:start}
+#ttForm .msg{grid-column:1/-1;font-size:.95rem;display:none;padding:1rem 1.1rem;border-radius:4px}
+#ttForm .msg.ok{display:block;background:#EFE7DA;color:var(--ink)}
+#ttForm .msg.err{display:block;background:#F6E3E3;color:#59010E}
+.op-steps{list-style:none;padding:0;margin:1.4rem 0 0;display:flex;flex-direction:column;gap:1.1rem}
+.op-steps li{display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;color:var(--ink-2)}
+.op-steps b{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--bordeaux);line-height:1}
+@media (max-width:860px){#inschrijven .op-form-wrap{grid-template-columns:1fr}#ttForm{grid-template-columns:1fr}}
+</style>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Reformer Teacher Training — Loulou Studio</title>
 <meta name="description" content="Reformer Teacher Training bij Loulou Studio: drie opleidingsweekends met theorie, anatomie en veel praktijk.">
@@ -661,7 +680,7 @@ footer .giant.in span{transform:translateY(0)}
 .op-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
 .op-rules div{border-top:1px solid var(--line);padding-top:.9rem;color:var(--ink-2);font-size:.95rem}
 .op-rules b{display:block;color:var(--ink);margin-bottom:.25rem}
-.op-cancel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:1.8rem}
+.op-cancel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:1.8rem}.op-cancel.two{grid-template-columns:repeat(2,1fr)}@media (max-width:960px){.op-cancel.two{grid-template-columns:1fr}}
 .op-cancel div{border:1px solid var(--line);border-radius:6px;padding:1.4rem;background:var(--card)}
 .op-cancel b{display:block;font-family:var(--serif);font-weight:400;font-size:2.6rem;line-height:1;color:var(--bordeaux)}
 .op-cancel span{display:block;margin-top:.5rem;color:var(--ink-2);font-size:.95rem}
@@ -711,9 +730,9 @@ footer .giant.in span{transform:translateY(0)}
     <div>
       <div class="eyebrow">Opleiding · Reformer Teacher Training</div>
       <h1 style="margin:.4rem 0 1.4rem">Word <em>reformer teacher</em></h1>
-      <p class="lede">Onze eerste Reformer Teacher Training: drie opleidingsweekends met theorie, anatomie, techniek en vooral veel praktijk. Daarna bereid je zelfstandig een veilige, sterke en goed opgebouwde reformerles voor en begeleid je ze.</p>
-      <div class="op-stats"><div><b>3</b><span>weekends, okt–nov</span></div><div><b>6</b><span>dagen, 11u–17u</span></div><div><b>10</b><span>deelnemers maximum</span></div></div>
-      <div class="cta"><a class="btn btn-solid" target="_blank" rel="noopener" href="mailto:info@louloustudio.be?subject=Inschrijving%20Reformer%20Teacher%20Training&amp;body=Hallo%20Loulou%20Studio%2C%0A%0AIk%20wil%20graag%20mijn%20plaats%20bevestigen%20voor%20de%20Reformer%20Teacher%20Training%20%2831%20oktober%20tot%2029%20november%29.%0A%0ANaam%3A%0ATelefoon%3A%0AFactuur%20nodig%20%28ja/nee%2C%20bedrijfsnaam%20en%20btw-nummer%29%3A%0A%0AGraag%20ontvang%20ik%20de%20verdere%20inschrijvings-%20en%20betalingsinformatie.%0A%0AGroetjes%2C%0A">Bevestig je plaats <span class="arr">→</span></a><a class="btn btn-ghost" href="#programma">Bekijk het programma</a></div>
+      <p class="lede">Nieuwe editie in april 2027. Drie opleidingsweekends met theorie, anatomie, techniek en vooral veel praktijk. Daarna bereid je zelfstandig een veilige, sterke en goed opgebouwde reformerles voor en begeleid je ze.</p>
+      <div class="op-stats"><div><b>3</b><span>weekends, april 2027</span></div><div><b>6</b><span>dagen, 11u–17u</span></div><div><b>10</b><span>deelnemers maximum</span></div></div>
+      <div class="cta"><a class="btn btn-solid"href="#inschrijven">Schrijf je in <span class="arr">→</span></a><a class="btn btn-ghost" href="#programma">Bekijk het programma</a></div>
     </div>
     <div class="ph rv"><img src="pro-instructeur-les.jpg" alt="Instructeur begeleidt een reformerles in de studio van Loulou"></div>
   </div>
@@ -723,7 +742,7 @@ footer .giant.in span{transform:translateY(0)}
   <div class="wrap">
     <div class="eyebrow">Programma</div>
     <h2 class="sh">Drie weekends, <em>van basis tot les</em></h2>
-    <div class="op-wk"><div class="w rv"><div class="n">01</div><div class="d">Weekend 1 · 31 oktober &amp; 1 november</div><h3>Fundamentals, anatomie &amp; reformer-repertoire</h3><p>De belangrijkste pilatesprincipes, functionele anatomie, houding en alignment, veiligheid en correct werken met de reformer. We bekijken springs en instellingen en bouwen stap voor stap het basisrepertoire op. Ook contra-indicaties en belangrijke aandachtspunten komen aan bod.</p></div><div class="w rv"><div class="n">02</div><div class="d">Weekend 2 · 14 &amp; 15 november</div><h3>Programming, sequencing &amp; teaching</h3><p>Een volledige reformerles opbouwen: sequencing, flow, cueing, regressies en progressies, verschillende niveaus begeleiden en oefeningen logisch verbinden. Je geeft steeds meer zelf les en leert techniek en alignment observeren en corrigeren.</p></div><div class="w rv"><div class="n">03</div><div class="d">Weekend 3 · 28 &amp; 29 november</div><h3>Practice teaching &amp; assessment preparation</h3><p>Zelfstandig lesgeven, feedback verwerken en alles samenbrengen tot een volledige lesopbouw. We bereiden je ook voor op het theoretische en praktische assessment.</p></div></div>
+    <div class="op-wk"><div class="w rv"><div class="n">01</div><div class="d">Weekend 1 · 3 &amp; 4 april 2027</div><h3>Anatomie, theorie, cueing &amp; beginner-oefeningen</h3><p>Functionele anatomie, de pilatesprincipes, veiligheid en correct werken met de reformer. Je leert duidelijk en kort cueën en we bouwen stap voor stap het volledige beginner-repertoire op.</p></div><div class="w rv"><div class="n">02</div><div class="d">Weekend 2 · 17 &amp; 18 april 2027</div><h3>Intermediate-oefeningen</h3><p>We bouwen verder op de basis met het intermediate-repertoire: techniek, veerspanning, regressies en progressies. Je leert techniek en alignment observeren en corrigeren.</p></div><div class="w rv"><div class="n">03</div><div class="d">Weekend 3 · 24 &amp; 25 april 2027</div><h3>Advanced-oefeningen, lesplannen &amp; practice teaching</h3><p>Het advanced-repertoire, lesplannen leren maken en zelf lesgeven met feedback. We bereiden je ook voor op het theoretische en praktische assessment.</p></div></div>
   </div>
 </section>
 
@@ -755,7 +774,7 @@ footer .giant.in span{transform:translateY(0)}
     <div class="op-two">
       <div class="op-txt rv">
         <p>Aan het einde volgt een korte theoretische beoordeling en een praktisch assessment. Voor het praktijkgedeelte bereid je zelf een reformerles van 30 minuten voor.</p>
-        <p>De praktische assessments vinden plaats in december. De exacte momenten kiezen we samen met de groep, zodat ze voor iedereen passen. Per moment komen we 1u30 samen: twee deelnemers geven elk hun les van 30 minuten, de rest van de groep volgt mee. Nadien nemen we samen tijd voor feedback en reflectie.</p>
+        <p>De praktische assessments vinden plaats na het laatste weekend. De exacte momenten kiezen we samen met de groep, zodat ze voor iedereen passen. Per moment komen we 1u30 samen: twee deelnemers geven elk hun les van 30 minuten, de rest van de groep volgt mee. Nadien nemen we samen tijd voor feedback en reflectie.</p>
       </div>
       <div class="op-txt rv">
         <h3>Waar we naar kijken</h3>
@@ -763,6 +782,7 @@ footer .giant.in span{transform:translateY(0)}
       </div>
     </div>
     <div class="op-cert rv"><p>Na het succesvol afronden van het volledige traject ontvang je een <strong>Loulou Studio Certificate of Completion</strong>.</p><small>Dit is een certificaat van Loulou Studio, geen officieel erkend diploma of extern geaccrediteerde kwalificatie.</small></div>
+    <div class="op-cert rv" style="margin-top:14px"><p><strong>Daarna lesgeven bij Loulou?</strong> Dan volgt nog een korte instap. Je bereidt een les van 50 minuten voor en geeft die eerst één keer aan een Loulou-teacher die je feedback geeft. Met die feedback geef je dezelfde les nog twee keer aan een groep.</p></div>
   </div>
 </section>
 
@@ -772,19 +792,21 @@ footer .giant.in span{transform:translateY(0)}
     <h2 class="sh">Het volledige <em>traject</em></h2>
     <div class="op-price">
       <div class="card main rv">
-        <div class="amt">€995<small>excl. btw</small></div>
-        <p>€1.203,95 incl. 21% btw. Op aanvraag ontvang je een factuur.</p>
-        <a class="btn" target="_blank" rel="noopener" href="mailto:info@louloustudio.be?subject=Inschrijving%20Reformer%20Teacher%20Training&amp;body=Hallo%20Loulou%20Studio%2C%0A%0AIk%20wil%20graag%20mijn%20plaats%20bevestigen%20voor%20de%20Reformer%20Teacher%20Training%20%2831%20oktober%20tot%2029%20november%29.%0A%0ANaam%3A%0ATelefoon%3A%0AFactuur%20nodig%20%28ja/nee%2C%20bedrijfsnaam%20en%20btw-nummer%29%3A%0A%0AGraag%20ontvang%20ik%20de%20verdere%20inschrijvings-%20en%20betalingsinformatie.%0A%0AGroetjes%2C%0A">Bevestig je plaats <span class="arr">→</span></a>
+        <div style="align-self:flex-start;background:#E4DBCE;color:#59010E;font-weight:600;font-size:.9rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1rem;border-radius:4px">Early bird · tot 15 januari</div>
+        <div class="amt" style="font-size:4.4rem">€1.000<small>excl. btw</small></div>
+        <p>€1.210 incl. 21% btw. Maximaal 5 early bird plaatsen.<br>Vanaf 16 januari: €1.250 excl. btw (€1.512,50 incl. btw).</p>
+        <p style="font-size:.9rem;opacity:.85">Betaling: 50% bij inschrijving (waarvan €500 niet-terugbetaalbaar voorschot), de overige 50% uiterlijk 4 weken voor de start. Op aanvraag ontvang je een factuur.</p>
+        <a class="btn"href="#inschrijven">Schrijf je in <span class="arr">→</span></a>
       </div>
       <div class="card inc rv">
         <div class="eyebrow">Inbegrepen</div>
-        <ul><li>6 opleidingsdagen</li><li>Cursusmateriaal</li><li>Self-practice in de studio op afgesproken momenten</li><li>Theoretische en praktische evaluatie</li><li>Praktijkassessment in december</li><li>Loulou Studio Certificate of Completion</li></ul>
+        <ul><li>6 opleidingsdagen</li><li>Cursusmateriaal</li><li>Self-practice in de studio op afgesproken momenten</li><li>Theoretische en praktische evaluatie</li><li>Praktijkassessment na het laatste weekend</li><li>Loulou Studio Certificate of Completion</li></ul>
       </div>
     </div>
     <div class="op-rules">
       <div class="rv"><b>Kleine groep</b>Maximaal 10 deelnemers, zodat er ruimte is voor persoonlijke begeleiding, feedback en practice teaching.</div>
-      <div class="rv"><b>Definitief na betaling</b>Je inschrijving is definitief na betaling van het volledige bedrag. Na je bevestiging krijg je de inschrijvings- en betalingsinfo.</div>
-      <div class="rv"><b>Tot een week vooraf</b>Inschrijven kan tot één week voor de start, zolang er plaatsen vrij zijn.</div>
+      <div class="rv"><b>Definitief na betaling</b>Na je inschrijving nemen we contact met je op voor de betaling. Je plaats is definitief na betaling van 50% van het bedrag.</div>
+      <div class="rv"><b>Tot 4 weken vooraf</b>Inschrijven kan tot 4 weken voor de start, zolang er plaatsen vrij zijn.</div>
     </div>
   </div>
 </section>
@@ -793,14 +815,48 @@ footer .giant.in span{transform:translateY(0)}
   <div class="wrap">
     <div class="eyebrow">Annulatie</div>
     <h2 class="sh">Als het <em>toch niet lukt</em></h2>
-    <div class="op-cancel">
-      <div class="rv"><b>75%</b><span>terugbetaald bij annulering meer dan 30 dagen voor de start</span></div>
-      <div class="rv"><b>50%</b><span>terugbetaald bij annulering tussen 15 en 30 dagen voor de start</span></div>
-      <div class="rv"><b>0%</b><span>bij annulering minder dan 15 dagen voor de start</span></div>
+    <div class="op-cancel two">
+      <div class="rv"><b>Tot 2 maanden</b><span>voor de start annuleren kan, met volledige terugbetaling min het voorschot van €500</span></div>
+      <div class="rv"><b>Binnen 2 maanden</b><span>voor de start is annuleren niet meer mogelijk</span></div>
     </div>
     <div class="op-note">
-      <p>Deze percentages gelden na afloop van de eventuele wettelijke herroepingstermijn. Je plaats kan, na overleg met Loulou Studio, overgedragen worden aan een andere deelnemer.</p>
+      <p>Bij inschrijving betaal je 50%, waarvan €500 een niet-terugbetaalbaar voorschot is. De overige 50% betaal je uiterlijk 4 weken voor de start. Deze voorwaarden gelden na afloop van de eventuele wettelijke herroepingstermijn. Je plaats kan, na overleg met Loulou Studio, overgedragen worden aan een andere deelnemer.</p>
       <p>Annuleert Loulou Studio zelf de opleiding, dan betalen we het volledige inschrijvingsbedrag terug.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="op-sec alt" id="inschrijven">
+  <div class="wrap">
+    <div class="eyebrow">Inschrijven</div>
+    <h2 class="sh">Schrijf je <em>in</em></h2>
+    <div class="op-form-wrap">
+      <div class="op-txt rv">
+        <p>Vul het formulier in en je ontvangt meteen een bevestiging per mail. Daarna nemen wij persoonlijk contact met je op.</p>
+        <ol class="op-steps">
+          <li><b>1</b><span>Je vult het inschrijvingsformulier in.</span></li>
+          <li><b>2</b><span>We bekijken je aanvraag en nemen binnen enkele werkdagen contact met je op.</span></li>
+          <li><b>3</b><span>Je betaalt 50% (waarvan €500 voorschot) en je plaats is definitief.</span></li>
+        </ol>
+      </div>
+      <form id="ttForm" class="rv" novalidate>
+        <label>Voornaam<input name="voornaam" autocomplete="given-name" required></label>
+        <label>Achternaam<input name="achternaam" autocomplete="family-name" required></label>
+        <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+        <label>Telefoon<input name="telefoon" type="tel" autocomplete="tel" required></label>
+        <label>Leeftijd<input name="leeftijd" type="number" min="16" max="99" inputmode="numeric" required></label>
+        <label>Woonplaats<input name="woonplaats" autocomplete="address-level2"></label>
+        <label class="full">Pilates-ervaring<select name="ervaring" required><option value="">Kies…</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>Meer dan 3 jaar</option><option>Ik geef al les (mat of reformer)</option></select></label>
+        <label>Wil je daarna lesgeven?<select name="lesgeven" required><option value="">Kies…</option><option>Ja, graag bij Loulou</option><option>Ja, ergens anders</option><option>Misschien</option><option>Nee, voor mezelf</option></select></label>
+        <label>Statuut<select name="statuut" required><option value="">Kies…</option><option>Flexi-job</option><option>Zelfstandige in hoofdberoep</option><option>Zelfstandige in bijberoep</option><option>Student</option><option>Weet ik nog niet</option></select></label>
+        <label class="full">Waarom wil je deelnemen?<textarea name="motivatie" rows="4" required></textarea></label>
+        <label class="full">Factuur nodig? (optioneel)<input name="factuur" placeholder="Bedrijfsnaam en btw-nummer"></label>
+        <label class="hp" aria-hidden="true">Laat leeg<input name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="chk full"><input type="checkbox" name="akkoord" required><span>Ik ga akkoord met de betalings- en annulatievoorwaarden hierboven.</span></label>
+        <button class="btn btn-solid" type="submit">Verstuur inschrijving <span class="arr">→</span></button>
+        <div class="msg" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </div>
 </section>
@@ -810,7 +866,7 @@ footer .giant.in span{transform:translateY(0)}
     <div class="eyebrow">Vragen?</div>
     <h2 class="sh">We vertellen je <em>er graag meer over</em></h2>
     <p>Over de inhoud of de praktische kant: stuur ons een berichtje of mail, of kom even langs in de studio in Drongen.</p>
-    <div class="cta"><a class="btn btn-solid" target="_blank" rel="noopener" href="mailto:info@louloustudio.be?subject=Inschrijving%20Reformer%20Teacher%20Training&amp;body=Hallo%20Loulou%20Studio%2C%0A%0AIk%20wil%20graag%20mijn%20plaats%20bevestigen%20voor%20de%20Reformer%20Teacher%20Training%20%2831%20oktober%20tot%2029%20november%29.%0A%0ANaam%3A%0ATelefoon%3A%0AFactuur%20nodig%20%28ja/nee%2C%20bedrijfsnaam%20en%20btw-nummer%29%3A%0A%0AGraag%20ontvang%20ik%20de%20verdere%20inschrijvings-%20en%20betalingsinformatie.%0A%0AGroetjes%2C%0A">Bevestig je plaats <span class="arr">→</span></a><a class="btn btn-ghost" target="_blank" rel="noopener" href="mailto:info@louloustudio.be?subject=Vraag%20over%20de%20Reformer%20Teacher%20Training">Stel je vraag</a></div>
+    <div class="cta"><a class="btn btn-solid"href="#inschrijven">Schrijf je in <span class="arr">→</span></a><a class="btn btn-ghost" target="_blank" rel="noopener" href="mailto:info@louloustudio.be?subject=Vraag%20over%20de%20Reformer%20Teacher%20Training">Stel je vraag</a></div>
     <p style="font-size:.88rem;margin-top:1.4rem">Al gediplomeerd? <a href="jobs.html" style="color:var(--bordeaux);text-decoration:underline;text-underline-offset:3px">Bekijk onze vacatures</a>.</p>
   </div>
 </section>
@@ -850,7 +906,7 @@ footer .giant.in span{transform:translateY(0)}
     const now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
     const key=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
     const DN=['ma','di','wo','do','vr','za','zo'];
-    const load=id=>fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:String(id),DateFrom:key(today)+'T00:00:00.000Z',UpFrontDays:7})}).then(r=>r.json()).then(j=>(j&&j.Result&&j.Result.CalendarItems)||[]);
+    const load=id=>fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({id:String(id),DateFrom:key(today)+'T00:00:00.000Z',UpFrontDays:7})}).then(r=>r.json()).then(j=>(j&&j.Result&&j.Result.CalendarItems)||[]);
     Promise.allSettled([load(1),load(2)]).then(res=>{
       const items=res.filter(x=>x.status==='fulfilled').flatMap(x=>x.value).map(it=>({st:new Date(it.StartTime),name:it.ActivityDescription||it.Description,left:Math.max(0,(it.MaxReservations||0)-(it.BookedItems||0)),full:!!it.HasFull})).filter(x=>x.st>now).sort((a,b)=>a.st-b.st);
       if(!items.length) return;
@@ -1246,5 +1302,33 @@ document.addEventListener('click',function(e){
 },true);
 })();</script>
 
+
+<script id="tt-form-js">
+(function(){
+  // Endpoint van de Supabase-functie die de mails verstuurt. Leeg = terugvallen op mailto.
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbxq0FW85V3iSmDGeF9M2lcH7RD_qHswkU89kWQPuPSIs98pgSiBqI4V3wOXCSVZGLHEsA/exec';
+  var f=document.getElementById('ttForm'); if(!f) return;
+  var msg=f.querySelector('.msg'), btn=f.querySelector('button[type=submit]');
+  function show(t,cls){msg.className='msg '+cls;msg.textContent=t;}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();show('Vul alle verplichte velden in.','err');return;}
+    var d={};new FormData(f).forEach(function(v,k){d[k]=typeof v==='string'?v.trim():v;});
+    if(d.website) return;
+    d.editie='april 2027';
+    if(!ENDPOINT){
+      var b='Inschrijving Reformer Teacher Training (april 2027)\n\nNaam: '+d.voornaam+' '+d.achternaam+'\nE-mail: '+d.email+'\nTelefoon: '+d.telefoon+'\nLeeftijd: '+d.leeftijd+'\nWoonplaats: '+(d.woonplaats||'-')+'\nErvaring: '+d.ervaring+'\nLesgeven: '+d.lesgeven+'\nStatuut: '+d.statuut+'\nFactuur: '+(d.factuur||'-')+'\n\nMotivatie:\n'+d.motivatie;
+      location.href='mailto:info@louloustudio.be?subject='+encodeURIComponent('Inschrijving Teacher Training - '+d.voornaam+' '+d.achternaam)+'&body='+encodeURIComponent(b);
+      return;
+    }
+    btn.disabled=true;btn.style.opacity=.6;show('Bezig met versturen…','ok');
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
+      .then(function(r){if(!r.ok) throw 0;return r.json();})
+      .then(function(){f.reset();show('Bedankt '+d.voornaam+'! Je inschrijving is goed ontvangen. Je krijgt zo een bevestiging per mail en we nemen snel contact met je op.','ok');})
+      .catch(function(){show('Er ging iets mis. Probeer opnieuw of mail ons via info@louloustudio.be.','err');})
+      .finally(function(){btn.disabled=false;btn.style.opacity='';});
+  });
+})();
+</script>
 </body>
 </html>
