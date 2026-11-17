@@ -845,11 +845,12 @@ footer .giant.in span{transform:translateY(0)}
         <label>Achternaam<input name="achternaam" autocomplete="family-name" required></label>
         <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
         <label>Telefoon<input name="telefoon" type="tel" autocomplete="tel" required></label>
-        <label>Leeftijd<input name="leeftijd" type="number" min="16" max="99" inputmode="numeric" required></label>
-        <label>Straat en huisnummer<input name="straat" autocomplete="street-address" required></label>
+        <label>Straat<input name="straat" autocomplete="address-line1" required></label>
+        <label>Huisnummer en bus<span style="display:flex;gap:.6rem"><input name="huisnr" placeholder="Nr." inputmode="numeric" required style="flex:1"><input name="bus" placeholder="Bus (optioneel)" style="flex:1"></span></label>
         <label>Postcode<input name="postcode" autocomplete="postal-code" inputmode="numeric" required></label>
         <label>Gemeente<input name="gemeente" autocomplete="address-level2" required></label>
-        <label class="full">Pilates-ervaring<select name="ervaring" required><option value="">Kies…</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>Meer dan 3 jaar</option><option>Ik geef al les (mat of reformer)</option></select></label>
+        <label>Leeftijd<input name="leeftijd" type="number" min="16" max="99" inputmode="numeric" required></label>
+        <label>Pilates-ervaring<select name="ervaring" required><option value="">Kies…</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>Meer dan 3 jaar</option><option>Ik geef al les (mat of reformer)</option></select></label>
         <label>Wil je daarna lesgeven?<select name="lesgeven" required><option value="">Kies…</option><option>Ja, graag bij Loulou</option><option>Ja, ergens anders</option><option>Misschien</option><option>Nee, voor mezelf</option></select></label>
         <label>Statuut<select name="statuut" required><option value="">Kies…</option><option>Flexi-job</option><option>Zelfstandige in hoofdberoep</option><option>Zelfstandige in bijberoep</option><option>Student</option><option>Weet ik nog niet</option></select></label>
         <label class="full">Waarom wil je deelnemen?<textarea name="motivatie" rows="4" required></textarea></label>
@@ -1318,7 +1319,7 @@ document.addEventListener('click',function(e){
     var d={};new FormData(f).forEach(function(v,k){d[k]=typeof v==='string'?v.trim():v;});
     if(d.website) return;
     d.editie='april 2027';
-    d.woonplaats=d.straat+', '+d.postcode+' '+d.gemeente;
+    d.woonplaats=d.straat+' '+d.huisnr+(d.bus?' bus '+d.bus:'')+', '+d.postcode+' '+d.gemeente;
     if(!ENDPOINT){
       var b='Inschrijving Reformer Teacher Training (april 2027)\n\nNaam: '+d.voornaam+' '+d.achternaam+'\nE-mail: '+d.email+'\nTelefoon: '+d.telefoon+'\nLeeftijd: '+d.leeftijd+'\nWoonplaats: '+(d.woonplaats||'-')+'\nErvaring: '+d.ervaring+'\nLesgeven: '+d.lesgeven+'\nStatuut: '+d.statuut+'\nFactuur: '+(d.factuur||'-')+'\n\nMotivatie:\n'+d.motivatie;
       location.href='mailto:info@louloustudio.be?subject='+encodeURIComponent('Inschrijving Teacher Training - '+d.voornaam+' '+d.achternaam)+'&body='+encodeURIComponent(b);
