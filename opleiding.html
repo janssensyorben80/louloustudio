@@ -795,7 +795,7 @@ footer .giant.in span{transform:translateY(0)}
         <div style="align-self:flex-start;background:#E4DBCE;color:#59010E;font-weight:600;font-size:.9rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1rem;border-radius:4px">Early bird · tot 15 januari</div>
         <div class="amt" style="font-size:4.4rem">€1.000<small>excl. btw</small></div>
         <p>€1.210 incl. 21% btw. Maximaal 5 early bird plaatsen.<br>Vanaf 16 januari: €1.250 excl. btw (€1.512,50 incl. btw).</p>
-        <p style="font-size:.9rem;opacity:.85">Betaling: 50% bij inschrijving (waarvan €500 niet-terugbetaalbaar voorschot), de overige 50% uiterlijk 4 weken voor de start. Op aanvraag ontvang je een factuur.</p>
+        <p style="font-size:.9rem;opacity:.85">Betaling: 50% bij inschrijving (waarvan €500 niet-terugbetaalbaar voorschot), de overige 50% uiterlijk 4 weken voor de start. Na betaling ontvang je een factuur.</p>
         <a class="btn"href="#inschrijven">Schrijf je in <span class="arr">→</span></a>
       </div>
       <div class="card inc rv">
@@ -846,12 +846,14 @@ footer .giant.in span{transform:translateY(0)}
         <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
         <label>Telefoon<input name="telefoon" type="tel" autocomplete="tel" required></label>
         <label>Leeftijd<input name="leeftijd" type="number" min="16" max="99" inputmode="numeric" required></label>
-        <label>Woonplaats<input name="woonplaats" autocomplete="address-level2"></label>
+        <label>Straat en huisnummer<input name="straat" autocomplete="street-address" required></label>
+        <label>Postcode<input name="postcode" autocomplete="postal-code" inputmode="numeric" required></label>
+        <label>Gemeente<input name="gemeente" autocomplete="address-level2" required></label>
         <label class="full">Pilates-ervaring<select name="ervaring" required><option value="">Kies…</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>Meer dan 3 jaar</option><option>Ik geef al les (mat of reformer)</option></select></label>
         <label>Wil je daarna lesgeven?<select name="lesgeven" required><option value="">Kies…</option><option>Ja, graag bij Loulou</option><option>Ja, ergens anders</option><option>Misschien</option><option>Nee, voor mezelf</option></select></label>
         <label>Statuut<select name="statuut" required><option value="">Kies…</option><option>Flexi-job</option><option>Zelfstandige in hoofdberoep</option><option>Zelfstandige in bijberoep</option><option>Student</option><option>Weet ik nog niet</option></select></label>
         <label class="full">Waarom wil je deelnemen?<textarea name="motivatie" rows="4" required></textarea></label>
-        <label class="full">Factuur nodig? (optioneel)<input name="factuur" placeholder="Bedrijfsnaam en btw-nummer"></label>
+        <label class="full">Factuur op naam van een bedrijf? (optioneel)<input name="factuur" placeholder="Bedrijfsnaam, adres en btw-nummer"></label>
         <label class="hp" aria-hidden="true">Laat leeg<input name="website" tabindex="-1" autocomplete="off"></label>
         <label class="chk full"><input type="checkbox" name="akkoord" required><span>Ik ga akkoord met de betalings- en annulatievoorwaarden hierboven.</span></label>
         <button class="btn btn-solid" type="submit">Verstuur inschrijving <span class="arr">→</span></button>
@@ -1316,6 +1318,7 @@ document.addEventListener('click',function(e){
     var d={};new FormData(f).forEach(function(v,k){d[k]=typeof v==='string'?v.trim():v;});
     if(d.website) return;
     d.editie='april 2027';
+    d.woonplaats=d.straat+', '+d.postcode+' '+d.gemeente;
     if(!ENDPOINT){
       var b='Inschrijving Reformer Teacher Training (april 2027)\n\nNaam: '+d.voornaam+' '+d.achternaam+'\nE-mail: '+d.email+'\nTelefoon: '+d.telefoon+'\nLeeftijd: '+d.leeftijd+'\nWoonplaats: '+(d.woonplaats||'-')+'\nErvaring: '+d.ervaring+'\nLesgeven: '+d.lesgeven+'\nStatuut: '+d.statuut+'\nFactuur: '+(d.factuur||'-')+'\n\nMotivatie:\n'+d.motivatie;
       location.href='mailto:info@louloustudio.be?subject='+encodeURIComponent('Inschrijving Teacher Training - '+d.voornaam+' '+d.achternaam)+'&body='+encodeURIComponent(b);
