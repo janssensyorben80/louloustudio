@@ -1133,15 +1133,15 @@ footer .giant.in span{transform:translateY(0)}
 <div class="lp-ov" id="lpOv" role="dialog" aria-modal="true" aria-labelledby="lpT" aria-hidden="true">
   <div class="lp">
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="ph"><img src="card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
-    <div class="tx">
-      <span class="dt">Nieuw bij Loulou</span>
-      <div class="eyebrow">Mat &amp; barre</div>
-      <h2 id="lpT">Nieuwe lessen <em>mat en barre</em></h2>
-      <p>De mat- en barrelessen zijn gestart in onze nieuwe zaal in Drongen. Een losse les kost €18, beurtenkaarten starten vanaf €85. Met een Unlimited-abonnement volg je ze er gewoon bij.</p>
+    <div class="ph" style="background:#59010E;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(1.8rem,4vw,3rem);min-height:460px"><span style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#E4DBCE">Black Friday · enkel vrijdag</span><div style="font-family:var(--serif);font-size:clamp(5rem,10vw,8.5rem);line-height:1;margin-top:.6rem;white-space:nowrap">10 <em style="color:#E4DBCE">+ 2</em></div><div style="font-family:var(--serif);font-style:italic;font-size:2rem;color:#E4DBCE;margin-top:.3rem">2 lessen gratis</div></div>
+        <div class="tx">
+      <span class="dt">Black Friday · vr 27 november</span>
+      <div class="eyebrow">Enkel deze vrijdag</div>
+      <h2 id="lpT">Black Friday <em style="display:block">bij Loulou</em></h2>
+      <p>Koop op vrijdag 27 november een 10-beurtenkaart en krijg er 2 lessen gratis bij: 12 reformerlessen voor €220 of 12 mat- en barrelessen voor €160.</p>
       <div class="cta">
-        <a class="btn btn-solid" href="reserveren.html#matbarre">Boek je les <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="prijzen.html#matbarre" id="lpP">Bekijk de prijzen</a>
+        <a class="btn btn-solid" href="reserveren.html">Koop je kaart <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="prijzen.html" id="lpP">Bekijk de prijzen</a>
       </div>
     </div>
   </div>
@@ -1149,7 +1149,9 @@ footer .giant.in span{transform:translateY(0)}
 <script>
 (function(){
   var ov=document.getElementById('lpOv'); if(!ov)return;
-  var KEY='loulou-popup-matbarre-okt26';
+  var KEY='loulou-popup-blackfriday-26';
+  // Black Friday: verdwijnt vanzelf na vrijdag 27/11/2026 23u59 (Belgische tijd)
+  if(Date.now()>Date.UTC(2026,10,27,23,0,0)){ov.remove();return;}
   // homepage: always; subpages: once per browser session
   // only on the homepage, at most once per visit, and never once someone is already on their way to book
   var isHome=!!document.querySelector('main.home');
