@@ -1082,7 +1082,7 @@ footer .giant.in span{transform:translateY(0)}
       <div class="eyebrow">Enkel deze vrijdag</div>
       <h2 id="lpT">Black Friday <em style="display:block">bij Loulou</em></h2>
       <p>Koop op vrijdag 27 november een 10-beurtenkaart en krijg er 2 lessen gratis bij: 12 reformerlessen voor €220 of 12 mat- en barrelessen voor €160.</p>
-      <div class="cta">
+      <div class="cta" id="lpCta" style="display:none">
         <a class="btn btn-solid" href="reserveren.html">Koop je kaart <span class="arr">→</span></a>
         <a class="btn btn-ghost" href="prijzen.html" id="lpP">Bekijk de prijzen</a>
       </div>
@@ -1095,6 +1095,8 @@ footer .giant.in span{transform:translateY(0)}
   var KEY='loulou-popup-blackfriday-26';
   // Black Friday: verdwijnt vanzelf na vrijdag 27/11/2026 23u59 (Belgische tijd)
   if(Date.now()>Date.UTC(2026,10,27,23,0,0)){ov.remove();return;}
+  // knoppen pas tonen vanaf vrijdag 27/11 00u (Belgische tijd), wanneer de kaarten te koop zijn
+  if(Date.now()>=Date.UTC(2026,10,26,23,0,0)){var ct=document.getElementById('lpCta');if(ct)ct.style.display='';}
   // homepage: always; subpages: once per browser session
   // only on the homepage, at most once per visit, and never once someone is already on their way to book
   var isHome=!!document.querySelector('main.home');
