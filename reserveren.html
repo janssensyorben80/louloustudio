@@ -1224,13 +1224,13 @@ footer .giant.in span{transform:translateY(0)}
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <div class="ph"><img src="card-barre.jpg" alt="Barreles met polsgewichten bij Loulou"></div>
     <div class="tx">
-      <span class="dt">Nieuw bij Loulou</span>
-      <div class="eyebrow">Mat &amp; barre</div>
-      <h2 id="lpT">Nieuwe lessen <em>mat en barre</em></h2>
-      <p>De mat- en barrelessen zijn gestart in onze nieuwe zaal in Drongen. Een losse les kost €18, beurtenkaarten starten vanaf €85. Met een Unlimited-abonnement volg je ze er gewoon bij.</p>
+      <span class="dt">Black Friday · vr 27 november</span>
+      <div class="eyebrow">Enkel deze vrijdag</div>
+      <h2 id="lpT">10 beurten, <em style="display:block">2 lessen gratis</em></h2>
+      <p>Enkel op vrijdag 27 november krijg je bij een 10-beurtenkaart 2 lessen gratis: 12 reformerlessen voor €220 of 12 mat- en barrelessen voor €160. De actie is alleen die dag te koop.</p>
       <div class="cta">
-        <a class="btn btn-solid" href="#kies">Boek je les <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="prijzen.html#matbarre" id="lpP">Bekijk de prijzen</a>
+        <a class="btn btn-solid" href="reserveren.html">Koop je kaart <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="prijzen.html" id="lpP">Bekijk de prijzen</a>
       </div>
     </div>
   </div>
@@ -1238,7 +1238,9 @@ footer .giant.in span{transform:translateY(0)}
 <script>
 (function(){
   var ov=document.getElementById('lpOv'); if(!ov)return;
-  var KEY='loulou-popup-matbarre-okt26';
+  var KEY='loulou-popup-blackfriday-26';
+  // Black Friday: verdwijnt vanzelf na vrijdag 27/11/2026 23u59 (Belgische tijd)
+  if(Date.now()>Date.UTC(2026,10,27,23,0,0)){ov.remove();return;}
   // homepage: always; subpages: once per browser session
   // only on the homepage, at most once per visit, and never once someone is already on their way to book
   var isHome=!!document.querySelector('main.home');
