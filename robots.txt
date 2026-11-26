@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
+
+# AI-zoekmachines en assistenten expliciet toegelaten
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://louloustudio.be/sitemap.xml
