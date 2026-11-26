@@ -1002,6 +1002,7 @@ footer .giant.in span{transform:translateY(0)}
   .lp .cta .btn{flex:1;justify-content:center;white-space:nowrap;padding-left:.9rem;padding-right:.9rem}
 }
 </style>
+<style>@media (max-width:700px){.lp .ph{min-height:0!important;padding:1.5rem 1.25rem 1.3rem!important}.lp .ph div:nth-child(2){font-size:4.2rem!important}}</style>
 <div class="lp-ov" id="lpOv" role="dialog" aria-modal="true" aria-labelledby="lpT" aria-hidden="true">
   <div class="lp">
     <button class="x" id="lpX" aria-label="Sluiten"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -1044,7 +1045,7 @@ footer .giant.in span{transform:translateY(0)}
   function after(){return (parseInt(c&&c.dataset.openMs,10)||2900)+500;}
   // show only once the visitor has scrolled down a bit (and the curtain is gone)
   function armScroll(){var fired=false;function chk(){if(fired)return;if(window.scrollY>Math.max(320,innerHeight*.55)){fired=true;removeEventListener('scroll',chk);setTimeout(open,350);}}addEventListener('scroll',chk,{passive:true});chk();}
-  function go(d){if(done)return;done=true;setTimeout(armScroll,d);}
+  function go(d){if(done)return;done=true;setTimeout(open,d);}
   if(!c||document.documentElement.classList.contains('nocurtain')){go(0);}
   else if(c.classList.contains('up')){go(after());}
   else{new MutationObserver(function(m,obs){if(c.classList.contains('up')){obs.disconnect();go(after());}}).observe(c,{attributes:true,attributeFilter:['class']});
